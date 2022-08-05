@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+:root {
+    --main-bg-color: #FE347E;
+    --black: #272525;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 70px;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 7px;
+}
+
+h1, h2, h3, h4, h5, h6, span, button {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+header, main {
+    padding-inline: var(--spacing-xxl);
+}
+
+.btn {
+    color: white;
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    box-shadow: 0px 10px 24px 7px rgba(254, 52, 126, 0.25);
+    border: none;
+    font-size: 17px;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border-radius: 30px;
+    transition: 0.2s ease-in-out 0.1s;
+}
+
+input {
+    border: 1px solid var(--main-bg-color);
+    cursor: pointer;
+}
+
+input[type='text'],
+input[type='number'] {
+  cursor: text;
+  margin-bottom: var(--spacing-md);
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
+label {
+    margin-block: var(--spacing-md);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input:focus{
+    outline: none;
+}
+
+/* HEADER */
+
+header {
+    height: 15vh;
+    background: #FFFFFF;
+    box-shadow: var(--shadow);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* MAIN */
+
+main {
+    height: 75vh;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 15px;
+    border-radius: 18px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+/* BOOK CARD */
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: var(--shadow);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: 15px;
+}
+
+.book-card > p {
+  font-size: 20px;
+  padding-block: var(--spacing-md);
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.btn-container > button {
+  border-radius: 15px;
+  margin-block: var(--spacing-sm);
+}
+
+.light-green {
+  background-color: hsl(120, 80%, 70%);
+  box-shadow: 0px 5px 20px 5px rgba(140, 242, 140, 0.5);
+}
+
+.light-green:hover {
+  transition: 0.3s ease-in-out 0.1s;
+  background-color: hsl(120, 100%, 60%);
+}
+
+.remove-btn {
+  background-color: hsl(0, 0%, 75%);
+  box-shadow: none;
+}
+
+.remove-btn:hover {
+  transition: 0.3s ease-in-out 0.1s;
+  background-color: hsl(0, 0%, 65%);
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fa-github {
+  font-size: 24px;
+  color: var(--black);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  height: 450px;
+  padding: var(--spacing-xl);
+  border-radius: 20px;
+  background-color: #fff;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.active {
+  display: block;
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.read-status {
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read-status > label {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+
+.checkbox {
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+.checkbox:checked {
+  accent-color: var(--main-bg-color);
+}
+
+.error-msg {
+  display: none;
+  color: red;
+}
+
+.error-msg.active {
+  display: inline;
+}
