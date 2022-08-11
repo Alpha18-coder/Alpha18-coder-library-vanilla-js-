@@ -1,8 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: normal;
 }
 
 :root {
@@ -17,7 +15,16 @@
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 7px;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-between;
+}
+
 h1, h2, h3, h4, h5, h6, span, button {
+    font-family: inherit;
     font-weight: bold;
     font-size: 30px;
     color: var(--black);
@@ -161,8 +168,8 @@ header {
 /* FOOTER */
 
 footer {
-  /* position: fixed;
-  bottom: -10px; */
+  /* position: absolute;
+  bottom: 0px; */
   width: 100%;
   height: 10vh;
   display: flex;
