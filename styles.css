@@ -24,13 +24,18 @@ h1, h2, h3, h4, h5, h6, span, button {
     text-transform: capitalize;
 }
 
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
 header {
     padding-inline: var(--spacing-xxl);
 }
 
 main {
   margin: var(--spacing-xl);
-  height: 65vh;
 }
 
 .btn {
@@ -88,8 +93,6 @@ header {
 
 
 /* MAIN */
-
-
 
 .add-btn {
     position: fixed;
@@ -158,6 +161,8 @@ header {
 /* FOOTER */
 
 footer {
+  /* position: fixed;
+  bottom: -10px; */
   width: 100%;
   height: 10vh;
   display: flex;
