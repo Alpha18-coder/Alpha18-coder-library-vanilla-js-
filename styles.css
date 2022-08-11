@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -19,12 +20,10 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
   justify-content: space-between;
 }
 
 h1, h2, h3, h4, h5, h6, span, button {
-    font-family: inherit;
     font-weight: bold;
     font-size: 30px;
     color: var(--black);
