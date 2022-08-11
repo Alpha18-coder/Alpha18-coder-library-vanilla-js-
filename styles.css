@@ -6,7 +6,7 @@
 }
 
 :root {
-    --main-bg-color: #FE347E;
+    --main-bg-color: hsl(338, 99%, 60%);
     --black: #272525;
     --spacing-xs: 5px;
     --spacing-sm: 10px;
@@ -24,18 +24,12 @@ h1, h2, h3, h4, h5, h6, span, button {
     text-transform: capitalize;
 }
 
-body {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-}
-
 header {
     padding-inline: var(--spacing-xxl);
 }
 
 main {
-  margin: var(--spacing-xl);
+  margin: var(--spacing-xxl);
 }
 
 .btn {
@@ -48,6 +42,11 @@ main {
     padding: var(--spacing-sm) var(--spacing-xl);
     border-radius: 30px;
     transition: 0.2s ease-in-out 0.1s;
+}
+
+.btn:hover {
+  transition: 0.3s ease-in-out 0.1s;
+  background-color: hsl(338, 99%, 50%);
 }
 
 input {
@@ -104,7 +103,7 @@ header {
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xxl);
   margin-top: var(--spacing-xl);
 }
 
@@ -112,13 +111,14 @@ header {
 
 .book-card {
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 300px;
-  max-height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   box-shadow: var(--shadow);
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding-block: var(--spacing-lg);
   border-radius: 15px;
 }
 
@@ -130,11 +130,11 @@ header {
 .button-group {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 85%;
 }
 
 .button-group > button {
-  border-radius: 15px;
+  border-radius: 10px;
   margin-block: var(--spacing-sm);
 }
 
